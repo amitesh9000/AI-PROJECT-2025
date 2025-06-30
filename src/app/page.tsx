@@ -12,7 +12,7 @@ export default function Home() {
   const summaryRef = useRef<HTMLDivElement | null>(null)
 
   const handleSubmit = async () => {
-    const res = await fetch("http://localhost:8000/summarize", {
+    const res = await fetch("https://ai-project-2025-backend-production.up.railway.app/summarize", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ text: input }),
